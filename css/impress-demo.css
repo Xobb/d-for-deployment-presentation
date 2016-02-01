@@ -41,8 +41,8 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
+ul {
+    list-style: square;
 }
 blockquote, q {
     quotes: none;
@@ -60,7 +60,7 @@ table {
 
 
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     
     min-height: 740px;
 
@@ -553,6 +553,15 @@ body     { pointer-events: none; }
     font-size: 2em;
 }
 
-.much-text ul {
-    list-style-type: square;
+.practice {
+    background-color:rgba(150,150,0,0.6);
+
+}
+
+.practice.much-text {
+    font-size: 1.2em;
+}
+
+.practice pre {
+    background-color:rgba(230,230,230,0.8);
 }

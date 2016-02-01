@@ -73,7 +73,7 @@
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 
     <!--
         
@@ -214,7 +214,7 @@
         <span id="try">Ну все, а тепер в дорогу!</span>
     </div>
 
-    <div class="step" data-x="-1500">
+    <div class="step" data-x="-1500" data-rotate-x="45">
         <h1>FTP Upload</h1>
         <hr>
         <p>
@@ -230,7 +230,7 @@
         </ul>
     </div>
 
-    <div class="step">
+    <div class="step" data-rotate-x="45">
         <h1>FTP Використання</h1>
         <hr>
         <p>
@@ -244,7 +244,7 @@
         </ul>
     </div>
 
-    <div class="step" data-x="1500">
+    <div class="step" data-x="1500"  data-rotate-x="45">
         <h1>З динамікою і базою даних</h1>
         <hr>
         <p>В 1995 разом з PHP появилась mysql, і цей дружній тандем танцює на 39% (2013 рік) веб серверах в цих ваших інтернетах.</p>
@@ -253,7 +253,7 @@
         </ul>
     </div>
 
-    <div class="step" data-x="3000">
+    <div class="step" data-x="3000"  data-rotate-x="45">
         <h1>А з ssh -- безпечніше.</h1>
         <hr>
         <p>
@@ -264,13 +264,58 @@
         <p>Можна детальніше тут зупинитись.</p>
     </div>
 
-    <div class="step" data-x="4500">
+    <div class="step" data-x="4500"  data-rotate-x="45">
         <p>
             І так за діда-прадіда жили ми до жаркого і посушливого 2005 року....
         </p>
     </div>
 
-    <div id="revolution" class="step" data-z="1000" data-x="-1500" data-y="3000">
+    <div class="step practice" data-x="6000"  data-rotate-x="45" data-rotate-y="45">
+        <h1>Gentlemen...</h1>
+        <hr>
+        <ul>
+            <li>Напишіть чекліст того, що ви хочете зробити. Покроково.</li>
+            <li>Перший пункт: maintenance page <strong>вкл</strong>.</li>
+            <li>Робіть всі інші пункти по чеклісту.</li>
+            <li>Перевірте чи все працює.</li>
+            <li>Останній пункт: maintenance page <strong>викл</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="step practice much-text" data-x="6000" data-rotate-x="45" data-rotate-y="45" data-z="-1500">
+        <h1>nginx (on your VPS)</h1>
+        <hr>
+        <p>Зробіть додатковий віртуалхост.</p>
+        <pre><code>
+# /etc/nginx/sites-available/mywebsite.maintenance.conf
+location / {
+    # Виключаємо для всіх окрім
+    allow 1.2.3.4; # IP адресу, з якої ми будемо перевіряти чи все загарзд.
+    deny all;
+    error_page 403 maintenance.php;
+
+    # далі йде ваш звичайний конфіг
+    # ...
+}
+
+location /maintenance.php {allow all;}
+        </code></pre>
+
+        <p>Включити:</p>
+        <pre><code>
+sudo rm -rf /etc/nginx/sites-enables/mywebsite.conf
+sudo ln -s  /etc/nginx/sites-available/mywebsite.maintenance.conf /etc/nginx/sites-enabled/mywebsite.maintenance.conf
+sudo service nginx configtest && sudo service nginx restart
+        </code></pre>
+        <p>Виключити:</p>
+        <pre><code>
+sudo rm -rf /etc/nginx/sites-enables/mywebsite.maintenance.conf
+sudo ln -s  /etc/nginx/sites-available/mywebsite.conf /etc/nginx/sites-enabled/mywebsite.conf
+sudo service nginx configtest && sudo service nginx restart
+        </code></pre>
+    </div>
+
+    <div id="revolution" class="step" data-x="-1500" data-y="1500">
         <h1>Revolution!</h1>
         <hr>
         <img src="img/rails-logo.svg" height="256" id="rails">
@@ -281,7 +326,7 @@
 
     </div>
 
-    <div id="revolution-consequences" class="step much-text" data-z="1000" data-y="3000">
+    <div id="revolution-consequences" class="step much-text" data-y="1500">
         <h1>Наслідки</h1>
         <hr>
         <ul>
@@ -293,6 +338,43 @@
             <li>Багато бізнесів отримують можливість оперувати великою кількістю серверів не збільшуючи при цьому кількість адміністраторів. Знята ще одна перешкода для формування стартапської культури.</li>
             <li>Коммуніті веб-розробників чи не вперше масово об'єднується в групи і розробляє флагманські фреймворки, також користуючись допомогою коммуніті зменшується кількість необхідних розробників для продуктів.</li>
             <li>Ющенко починає просерати всі полімери =)</li>
+        </ul>
+    </div>
+
+    <div id="news" class="step much-text" data-y="1500" data-x="1500">
+        <h1>Новинки того року</h1>
+        <hr>
+        <ul>
+            <li>Скриптові аплікейшони почали більдити. (Не php звісно, тим не менше). Тепер почали тестувати більди.</li>
+            <li>З'явились адекватні інструменти для автоматичного тестування, йому почали приділяти увагу. Однією складовою більд процесу став прогін юніт, функціональних та прийомних тестів.</li>
+            <li>Така автоматизація дозволила провіжинити з bare-metal до продакшон системи за лінійний час без участі системного адміністратора.</li>
+            <li><strong>Так як це призвело до подешевшання VPS то проекти, що приносили гроші почали мігрувати з Shared-Hosting'а.</strong></li>
+            <li>Так як ми почали деплоїти збілджені пакети, то emerge world почав пропадати з сервера, які і інші source-based дистрибутиви.</li>
+        </ul>
+    </div>
+
+    <div id="approaches" class="step" data-y="1500" data-x="3000">
+        <h1>Підходи до деплою</h1>
+        <hr>
+        <ul>
+            <li>Легко робиться maintenance сторінка під час деплою.</li>
+            <li>Можливий не тільки оновлення коду, але і зміна конфігурації.</li>
+            <li>Атомарність процедури деплою. Так би мовити транзакційність.</li>
+            <li>Автоматизований роллбек при помилці.</li>
+            <li>Перші кроки до zero-downtime deploy.</li>
+        </ul>
+    </div>
+
+    <div class="step practice" data-y="1500" data-x="4500" data-rotate-y="45" data-z="1000">
+        <h1>Zero-downtime</h1>
+        <hr>
+        <ul>
+            <li>Золоте правило ще одного сервера (кластера).</li>
+            <li>DNS.</li>
+            <li>Стратегія оновлення для веб серверів: nginx, apache2, php-fpm, gunicorn, passenger, nodejs та коллєги.</li>
+            <li>Стратегія оновлення файлового сховища.</li>
+            <li>Стратегія міграції бази даних та її реплікації.</li>
+            <li>Ще про базу даних.</li>
         </ul>
     </div>
 
