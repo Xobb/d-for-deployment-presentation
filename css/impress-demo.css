@@ -256,6 +256,22 @@ body     { pointer-events: none; }
     transition-delay:         0.25s;
 }
 
+#revolution #puppet {
+    position: absolute;
+    top: -5em;
+    left:20em;
+    transform:         rotate(40deg);
+    transition-delay:         0.25s;
+}
+
+#revolution #php {
+    position: absolute;
+    top: 6em;
+    left:20em;
+    transform:         rotate(-5deg);
+    transition-delay:         0.25s;
+}
+
 /* big thoughts */
 
 #big {
@@ -533,3 +549,10 @@ body     { pointer-events: none; }
     display: block;
 }
 
+.much-text {
+    font-size: 2em;
+}
+
+.much-text ul {
+    list-style-type: square;
+}
