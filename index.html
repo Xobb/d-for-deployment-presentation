@@ -416,26 +416,25 @@
         </ul>
     </div>
 
-    <div class="step">
+    <div class="step much-text" data-y="3000" data-x="-1500">
         <h1>PaaS та IaaS</h1>
         <hr>
         <p>
-            Платформи -- набір пре-конфігурованих серверів, що готові приймати ваш аплікейшон і одразу його запускати.
-            Приклади: Heroku, CenturyLink, etc. Перевагою платформи є швидкість розгортання і відсутність необхідності і
+            <strong>Платформи</strong> -- набір пре-конфігурованих серверів, що готові приймати ваш аплікейшон і одразу його запускати.
+            Приклади: Heroku, CenturyLink, etc. Перевагою платформи є швидкість розгортання і відсутність необхідності в
             Ops`у. Мінусами ж є відсутність можливості кастомізації платформи, встановлення додаткового програмного
-            забезпечення і ціна. Більше підходить для стартапів з невеликими навантаженнями на початковому рівні
+            забезпечення і ціна. Більше підходить для стартапів з невеликими навантаженнями на початковому етапі
             розвитку.
         </p>
         <p>
-            Інфраструктура в свою чергу являється серверами, віртуальними чи фізичними, мережею, сховищем інформації і
-            іншими
-            низькорівневими компонентами, які ви орендуєте на умовах власника. Найзнатнішим прикладом є AWS. Також
-            відносять туди JoyentCloud, DigitalOcean, Linode, Slicehost, хоча останні три являються скоріше надають VPS
-            на стероїдах.
+            <strong>Інфраструктура</strong> в свою чергу являється серверами, віртуальними чи фізичними, мережею, сховищем інформації і
+            іншими низькорівневими компонентами, які ви орендуєте на умовах власника. Найзнатнішим прикладом є AWS.
+            Також відносять туди JoyentCloud, DigitalOcean, Linode, Slicehost, хоча останні три являються скоріше
+            надають VPS на стероїдах.
         </p>
     </div>
 
-    <div id="docker" class="step">
+    <div id="docker" class="step" data-y="3000" data-rotate="-45">
         <h1>Docker</h1>
         <hr>
         <ul>
@@ -447,7 +446,7 @@
         </ul>
     </div>
 
-    <div class="step">
+    <div class="step" data-y="3000" data-x="1500" data-rotate="-45">
         <h1>Що пхати в контейнери?</h1>
         <hr>
         <ul>
@@ -461,7 +460,7 @@
         </ul>
     </div>
 
-    <div class="step">
+    <div class="step" data-y="3000" data-x="3000" data-rotate="-45">
         <h1>Де ранити контейнери?</h1>
         <hr>
         <ul>
@@ -470,6 +469,30 @@
             <li>AWS EC2 with Docker AMI.</li>
             <li>Локально на віртуалочці.</li>
         </ul>
+    </div>
+
+    <div class="step practice much-text" data-y="3000" data-x="4500" data-rotate="-45">
+        <h1>Як збільдити контейена?</h1>
+        <hr>
+        <p>Контейнери більдяться з контейенерів. Більдити не з контейенерів для вебу не має сенсу.</p>
+        <pre><code>
+FROM ubuntu # беремо цей контейнер за основу
+MAINTAINER Mauricio Camentata
+LABEL Description="This image is used to start the nodejs" Vendor="ACME LLC" Version="1.0"
+
+
+RUN apt-get install -y software-properties-common python # невірно
+RUN add-apt-repository ppa:chris-lea/node.js # невірно
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe" >> /etc/apt/sources.list && \ # отак вірно
+    apt-get update && \
+    apt-get install -y nodejs
+RUN mkdir /var/www
+
+ADD app.js /var/www/app.js
+EXPOSE 8080
+ENV APP_ENV=prod APP_DEBUG=0
+CMD ["/usr/bin/node", "/var/www/app.js"]
+        </code></pre>
     </div>
 
     <!--
