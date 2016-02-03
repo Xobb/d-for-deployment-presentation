@@ -65,15 +65,18 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1024"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by
+        Bartek Szopka @bartaz</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <meta name="description"
+          content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com."/>
+    <meta name="author" content="Bartek Szopka"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,cyrillic,cyrillic-ext'
+          rel='stylesheet' type='text/css'>
 
     <!--
         
@@ -90,10 +93,10 @@
         When creating your own presentation get rid of this file. Start from scratch, it's fun!
         
     -->
-    <link href="css/impress-demo.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link href="css/impress-demo.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 </head>
 
 <!--
@@ -120,7 +123,8 @@
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
 -->
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+        version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
     <p>If these browsers are not available you can use <b>Internet Explorer</b>, but it's actually not a browser.</p>
 </div>
@@ -198,7 +202,8 @@
             розвиток і переродження технологічних рішень.
         </p>
         <p>
-            Щоб зробити нашу мандрівку корисною будь ласка задавайте питання в любий момент часу, коли щось не розумієте.
+            Щоб зробити нашу мандрівку корисною будь ласка задавайте питання в любий момент часу, коли щось не
+            розумієте.
             Також, якщо ви знаєте відповідь на питання то відповідайте!
         </p>
     </div>
@@ -207,7 +212,8 @@
         <h1>Основні зупинки</h1>
         <hr>
         <p>
-            Хоча наша подорож масштабна і захоплююча, ми будемо деякі зупинки проїжати швидше, а на деяких зупинимось довше,
+            Хоча наша подорож масштабна і захоплююча, ми будемо деякі зупинки проїжати швидше, а на деяких зупинимось
+            довше,
             щоб насолодитись моментом і відчути всю красу та драматичність, яка буде присутня.
         </p>
 
@@ -244,16 +250,17 @@
         </ul>
     </div>
 
-    <div class="step" data-x="1500"  data-rotate-x="45">
+    <div class="step" data-x="1500" data-rotate-x="45">
         <h1>З динамікою і базою даних</h1>
         <hr>
-        <p>В 1995 разом з PHP появилась mysql, і цей дружній тандем танцює на 39% (2013 рік) веб серверах в цих ваших інтернетах.</p>
+        <p>В 1995 разом з PHP появилась mysql, і цей дружній тандем танцює на 39% (2013 рік) веб серверах в цих ваших
+            інтернетах.</p>
         <ul>
             <li>Прекрасно аплоудиться процедурами того часу і досі.</li>
         </ul>
     </div>
 
-    <div class="step" data-x="3000"  data-rotate-x="45">
+    <div class="step" data-x="3000" data-rotate-x="45">
         <h1>А з ssh -- безпечніше.</h1>
         <hr>
         <p>
@@ -264,13 +271,13 @@
         <p>Можна детальніше тут зупинитись.</p>
     </div>
 
-    <div class="step" data-x="4500"  data-rotate-x="45">
+    <div class="step" data-x="4500" data-rotate-x="45">
         <p>
             І так за діда-прадіда жили ми до жаркого і посушливого 2005 року....
         </p>
     </div>
 
-    <div class="step practice" data-x="6000"  data-rotate-x="45" data-rotate-y="45">
+    <div class="step practice" data-x="6000" data-rotate-x="45" data-rotate-y="45">
         <h1>Gentlemen...</h1>
         <hr>
         <ul>
@@ -287,31 +294,32 @@
         <hr>
         <p>Зробіть додатковий віртуалхост.</p>
         <pre><code>
-# /etc/nginx/sites-available/mywebsite.maintenance.conf
-location / {
-    # Виключаємо для всіх окрім
-    allow 1.2.3.4; # IP адресу, з якої ми будемо перевіряти чи все загарзд.
-    deny all;
-    error_page 403 maintenance.php;
+            # /etc/nginx/sites-available/mywebsite.maintenance.conf
+            location / {
+            # Виключаємо для всіх окрім
+            allow 1.2.3.4; # IP адресу, з якої ми будемо перевіряти чи все загарзд.
+            deny all;
+            error_page 403 maintenance.php;
 
-    # далі йде ваш звичайний конфіг
-    # ...
-}
+            # далі йде ваш звичайний конфіг
+            # ...
+            }
 
-location /maintenance.php {allow all;}
+            location /maintenance.php {allow all;}
         </code></pre>
 
         <p>Включити:</p>
         <pre><code>
-sudo rm -rf /etc/nginx/sites-enables/mywebsite.conf
-sudo ln -s  /etc/nginx/sites-available/mywebsite.maintenance.conf /etc/nginx/sites-enabled/mywebsite.maintenance.conf
-sudo service nginx configtest && sudo service nginx restart
+            sudo rm -rf /etc/nginx/sites-enables/mywebsite.conf
+            sudo ln -s /etc/nginx/sites-available/mywebsite.maintenance.conf
+            /etc/nginx/sites-enabled/mywebsite.maintenance.conf
+            sudo service nginx configtest && sudo service nginx restart
         </code></pre>
         <p>Виключити:</p>
         <pre><code>
-sudo rm -rf /etc/nginx/sites-enables/mywebsite.maintenance.conf
-sudo ln -s  /etc/nginx/sites-available/mywebsite.conf /etc/nginx/sites-enabled/mywebsite.conf
-sudo service nginx configtest && sudo service nginx restart
+            sudo rm -rf /etc/nginx/sites-enables/mywebsite.maintenance.conf
+            sudo ln -s /etc/nginx/sites-available/mywebsite.conf /etc/nginx/sites-enabled/mywebsite.conf
+            sudo service nginx configtest && sudo service nginx restart
         </code></pre>
     </div>
 
@@ -333,10 +341,16 @@ sudo service nginx configtest && sudo service nginx restart
             <li>Слово DevOps починається використовуватись в закутках софтварних компаній, ще не популярне воно
                 зовсім.
             </li>
-            <li>З'являється можливість розвивати opensource проекти з максимальним залученням community і з кожним роком стає все більш доступно. Ще не з'явився github, але відправити патча, який в кінці змерджить сам Лінус стає можливим.
+            <li>З'являється можливість розвивати opensource проекти з максимальним залученням community і з кожним роком
+                стає все більш доступно. Ще не з'явився github, але відправити патча, який в кінці змерджить сам Лінус
+                стає можливим.
             </li>
-            <li>Багато бізнесів отримують можливість оперувати великою кількістю серверів не збільшуючи при цьому кількість адміністраторів. Знята ще одна перешкода для формування стартапської культури.</li>
-            <li>Коммуніті веб-розробників чи не вперше масово об'єднується в групи і розробляє флагманські фреймворки, також користуючись допомогою коммуніті зменшується кількість необхідних розробників для продуктів.</li>
+            <li>Багато бізнесів отримують можливість оперувати великою кількістю серверів не збільшуючи при цьому
+                кількість адміністраторів. Знята ще одна перешкода для формування стартапської культури.
+            </li>
+            <li>Коммуніті веб-розробників чи не вперше масово об'єднується в групи і розробляє флагманські фреймворки,
+                також користуючись допомогою коммуніті зменшується кількість необхідних розробників для продуктів.
+            </li>
             <li>Ющенко починає просерати всі полімери =)</li>
         </ul>
     </div>
@@ -345,11 +359,19 @@ sudo service nginx configtest && sudo service nginx restart
         <h1>Новинки того року</h1>
         <hr>
         <ul>
-            <li>Скриптові аплікейшони почали більдити. (Не php звісно, тим не менше). Тепер почали тестувати більди.</li>
-            <li>З'явились адекватні інструменти для автоматичного тестування, йому почали приділяти увагу. Однією складовою більд процесу став прогін юніт, функціональних та прийомних тестів.</li>
-            <li>Така автоматизація дозволила провіжинити з bare-metal до продакшон системи за лінійний час без участі системного адміністратора.</li>
-            <li><strong>Так як це призвело до подешевшання VPS то проекти, що приносили гроші почали мігрувати з Shared-Hosting'а.</strong></li>
-            <li>Так як ми почали деплоїти збілджені пакети, то emerge world почав пропадати з сервера, які і інші source-based дистрибутиви.</li>
+            <li>Скриптові аплікейшони почали більдити. (Не php звісно, тим не менше). Тепер почали тестувати більди.
+            </li>
+            <li>З'явились адекватні інструменти для автоматичного тестування, йому почали приділяти увагу. Однією
+                складовою більд процесу став прогін юніт, функціональних та прийомних тестів.
+            </li>
+            <li>Така автоматизація дозволила провіжинити з bare-metal до продакшон системи за лінійний час без участі
+                системного адміністратора.
+            </li>
+            <li><strong>Так як це призвело до подешевшання VPS то проекти, що приносили гроші почали мігрувати з
+                Shared-Hosting'а.</strong></li>
+            <li>Так як ми почали деплоїти збілджені пакети, то emerge world почав пропадати з сервера, які і інші
+                source-based дистрибутиви.
+            </li>
         </ul>
     </div>
 
@@ -371,10 +393,83 @@ sudo service nginx configtest && sudo service nginx restart
         <ul>
             <li>Золоте правило ще одного сервера (кластера).</li>
             <li>DNS.</li>
-            <li>Стратегія оновлення для веб серверів: nginx, apache2, php-fpm, gunicorn, passenger, nodejs та коллєги.</li>
+            <li>Стратегія оновлення для веб серверів: nginx, apache2, php-fpm, gunicorn, passenger, nodejs та коллєги.
+            </li>
             <li>Стратегія оновлення файлового сховища.</li>
             <li>Стратегія міграції бази даних та її реплікації.</li>
             <li>Ще про базу даних.</li>
+        </ul>
+    </div>
+
+    <div class="step practice" data-y="1500" data-x="6000" data-rotate-y="45" data-z="1000">
+        <h1>Jenkins</h1>
+        <hr>
+        <ul>
+            <li>Загальний підхід до використання дженкінса: більд основної гілки і пулл реквестів.</li>
+            <li>
+                <ul>
+                    <li>Більд за розкладом чи по подіях?</li>
+                    <li>Git hooks для подій.</li>
+                </ul>
+            </li>
+            <li>Тести vs Більд аплікейшона для деплою</li>
+            <li>Артифакти.</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h1>PaaS та IaaS</h1>
+        <hr>
+        <p>
+            Платформи -- набір пре-конфігурованих серверів, що готові приймати ваш аплікейшон і одразу його запускати.
+            Приклади: Heroku, CenturyLink, etc. Перевагою платформи є швидкість розгортання і відсутність необхідності і
+            Ops`у. Мінусами ж є відсутність можливості кастомізації платформи, встановлення додаткового програмного
+            забезпечення і ціна. Більше підходить для стартапів з невеликими навантаженнями на початковому рівні
+            розвитку.
+        </p>
+        <p>
+            Інфраструктура в свою чергу являється серверами, віртуальними чи фізичними, мережею, сховищем інформації і
+            іншими
+            низькорівневими компонентами, які ви орендуєте на умовах власника. Найзнатнішим прикладом є AWS. Також
+            відносять туди JoyentCloud, DigitalOcean, Linode, Slicehost, хоча останні три являються скоріше надають VPS
+            на стероїдах.
+        </p>
+    </div>
+
+    <div id="docker" class="step">
+        <h1>Docker</h1>
+        <hr>
+        <ul>
+            <li>Що це таке?</li>
+            <li>LXC -- годна віртуалізація на рівні операційної системи.</li>
+            <li>cgroups -- діллєр вє.. ой, ресурсів.</li>
+            <li>AUFS -- файлова система як наполєон з кондитерської?</li>
+            <li>Що ж все-таки таке цей ваш докер?</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h1>Що пхати в контейнери?</h1>
+        <hr>
+        <ul>
+            <li>Ваші аплікейшони.</li>
+            <li>Web-cервери.</li>
+        </ul>
+        <h1>Що не пхати в контейнери?</h1>
+        <hr>
+        <ul>
+            <li>Сервери баз даних.</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h1>Де ранити контейнери?</h1>
+        <hr>
+        <ul>
+            <li>На своїй інфраструктурі?</li>
+            <li>Google Container Engine.</li>
+            <li>AWS EC2 with Docker AMI.</li>
+            <li>Локально на віртуалочці.</li>
         </ul>
     </div>
 
@@ -426,9 +521,9 @@ sudo service nginx configtest && sudo service nginx restart
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
 <script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
 </script>
 
 <!--
@@ -450,12 +545,13 @@ if ("ontouchstart" in document.documentElement) {
 <script>impress().init();</script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script>
-$(document).ready(function(){
-    function revolution(){
-        $('#revolution h1').fadeOut(500).fadeIn(500);
-    }
-    setInterval(revolution, 1000)
-});
+    $(document).ready(function () {
+        function revolution() {
+            $('#revolution h1').fadeOut(500).fadeIn(500);
+        }
+
+        setInterval(revolution, 1000)
+    });
 </script>
 
 <!--
